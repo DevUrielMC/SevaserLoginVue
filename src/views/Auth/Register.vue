@@ -43,8 +43,8 @@
 </template>
 
 <script>
-import '@/firebase/init.js'
-import 'firebase'
+import db from '@/firebase/init.js'
+import firebase from  'firebase'
 
 export default {
   data(){
@@ -57,7 +57,7 @@ export default {
   },
     name: 'Register',
     
-    methods: {/*
+    methods: {
       register(){
         
         this.error = ''
@@ -79,7 +79,7 @@ export default {
             
         }
         
-      }*/
+      }
     }
 }
 </script>
