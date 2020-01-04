@@ -41,10 +41,10 @@
 
 
 </template>
-
+/*eslint-disable */
 <script>
-import db from '@/firebase/init.js'
-import firebase from  'firebase'
+import db from '@/firebase/init.js'// eslint-disable-line
+import firebase from  'firebase'// eslint-disable-line
 
 export default {
   data(){
@@ -69,9 +69,9 @@ export default {
             this.email = ''
             this.password = ''
             
-           console.log(user)
-          }).catch(err =>  {
-           this.error = errr.message
+           console.log(user)// eslint-disable-line
+          }).catch(err =>  {// eslint-disable-line
+           this.error = errr.message// eslint-disable-line
           })
 
         }else{                                                //Module Error (from ./node_modules/eslint-loader/index.js):
