@@ -3,18 +3,18 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <router-link class="navbar-item" to="/">
-      <h3 class ="title is-3">MyApp</h3>
+      <h3 class ="title is-3">¿SEVASER?</h3>
 
     </router-link >
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+    <a role="button" class="navbar-burger burger" :class="{'is-active': isOpen}"  @click.prevent="tooggleMenu"  aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
 
-  <div id="navbarBasicExample" class="navbar-menu">
+  <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': isOpen}">
     <div class="navbar-start">
       <router-link class="navbar-item" to="/">
         Home
@@ -42,7 +42,19 @@
 </template>
 
 <script>
+
 export default {
-    
+  data(){
+    return {
+      isOpen: false
+    }
+  },
+
+    methods: {
+      tooggleMenu(){
+        const status = !this.isOpen
+        this.isOpen = status
+      }
+    }
 }
 </script>
